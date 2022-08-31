@@ -15,7 +15,8 @@ workflows:
     plan:
       steps:
       - init
-      - plan
+      - plan:
+         extra_args: ["-var-file", "/home/nanditasahu031/atlantis-terraform/terraform.tfvars"]
     apply:
       steps:
       - apply
